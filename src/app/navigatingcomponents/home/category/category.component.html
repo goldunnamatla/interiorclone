@@ -1,0 +1,26 @@
+<div class="categories">
+    <div class="categories-head">
+        <div class="categories-left">
+            <h1>Shop Popular Categories</h1>
+            <img src="../../../../assets/home/banner/tick.png" alt="">
+        </div>
+        <div class="categories-right">
+            <h1>see All</h1>
+        </div>
+    </div>
+</div>
+<div class="categories-cards">
+    <div class="container">
+        <div class="row" *ngFor="let g of cards">
+                <div class="card">
+                    <h1>chair</h1>
+                    <img [src]="g.src" [alt]="g.alt">
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
