@@ -5,6 +5,7 @@ import { CategoriesComponent } from './navigatingcomponents/categories/categorie
 import { FurnitureComponent } from './navigatingcomponents/furniture/furniture.component';
 import { InteriordesignComponent } from './navigatingcomponents/interiordesign/interiordesign.component';
 import { PropertyComponent } from './navigatingcomponents/property/property.component';
+import { ProductdetailesComponent } from './navigatingcomponents/interiordesign/productdetailes/productdetailes.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'furniture', component: FurnitureComponent },
   { path: 'interiordesign', component: InteriordesignComponent },
   { path: 'property', component: PropertyComponent },
+  { path: 'product/:id', component: ProductdetailesComponent},
   { path: '**', component: HomeComponent }
 ];
 

@@ -15,7 +15,7 @@ export class InteriordesignComponent implements OnInit {
   selectedprice: string = '';
   searchitem: string = '';
   currentpage=1;
-  pagesize=10;
+  pagesize=8;
   totalpages=0;
   pageproducts:any[]=[];
 
