@@ -60,3 +60,16 @@ section{
     margin: 5% 0;
     
 }
+.page{
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+.page button{
+    background-color: blue;
+    color: #fff;
+}

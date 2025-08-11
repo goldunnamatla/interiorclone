@@ -1,0 +1,172 @@
+<!-- <div class="container" style="margin: 10% 0;">
+    <h2>Registration</h2>
+    <form [formGroup]="registrationform" (ngSubmit)="onsubmit()">
+        <input type="text" placeholder="enter name" formControlName="name">
+        <div *ngIf="registrationform.controls.name.invalid && registrationform.controls.name.touched">
+            name must contain atleast four character
+        </div>
+        <input type="email" placeholder="enter email" formControlName="email">
+        <div *ngIf="registrationform.controls.email.invalid && registrationform.controls.email.touched">
+            enter a valid email
+        </div>
+        <input type="password" placeholder="enter password" formControlName="password">
+        <div *ngIf="registrationform.controls.password.invalid && registrationform.controls.password.touched">
+            password must contain atleast four character
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <p class="success" *ngIf="successmessage">{{successmessage}}</p>
+    <p class="error" *ngIf="errormessage">{{errormessage}}</p>
+</div> -->
+<body class="bg-white min-h-screen">
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20minimalist%20furniture%20showroom%20interior%20with%20natural%20wood%20elements%2C%20soft%20lighting%2C%20clean%20white%20walls%2C%20elegant%20furniture%20displays%2C%20peaceful%20atmosphere%2C%20professional%20photography%2C%20high%20quality%2C%20contemporary%20design&width=1920&height=1080&seq=bg001&orientation=landscape'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="bg-white bg-opacity-95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 w-full max-w-md">
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+                        <i class="ri-leaf-line"></i>
+                    </div>
+                    <h1 class="font-['Pacifico'] text-2xl text-black ml-2">logo</h1>
+                </div>
+                <h2 class="text-3xl font-bold text-black mb-2">Create Your Account</h2>
+                <p class="text-gray-600 text-sm">Join our furniture family and discover premium quality pieces for your home</p>
+            </div>
+
+            <form class="space-y-6">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-black mb-2">
+                            First Name <span class="text-primary">*</span>
+                        </label>
+                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-20 outline-none transition-all text-sm" placeholder="John">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-black mb-2">
+                            Last Name <span class="text-primary">*</span>
+                        </label>
+                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-20 outline-none transition-all text-sm" placeholder="Smith">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-black mb-2">
+                        Email Address <span class="text-primary">*</span>
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400">
+                                <i class="ri-mail-line text-sm"></i>
+                            </div>
+                        </div>
+                        <input type="email" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-20 outline-none transition-all text-sm" placeholder="john.smith@example.com">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-black mb-2">
+                        Password <span class="text-primary">*</span>
+                    </label>
+                    <div class="relative">
+                        <input type="password" id="password" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-20 outline-none transition-all text-sm pr-10" placeholder="Create a strong password">
+                        <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400">
+                                <i class="ri-eye-line text-sm"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <div class="password-strength bg-gray-200 rounded-full" id="passwordStrength"></div>
+                        <p class="text-xs text-gray-500 mt-1" id="strengthText">Password strength: Weak</p>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-black mb-2">
+                        Confirm Password <span class="text-primary">*</span>
+                    </label>
+                    <input type="password" id="confirmPassword" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-20 outline-none transition-all text-sm" placeholder="Confirm your password">
+                    <p class="text-xs text-red-500 mt-1 hidden" id="passwordMismatch">Passwords do not match</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-black mb-2">Phone Number</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400">
+                                <i class="ri-phone-line text-sm"></i>
+                            </div>
+                        </div>
+                        <input type="tel" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary focus:ring-opacity-20 outline-none transition-all text-sm" placeholder="+1 (555) 123-4567">
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <input type="checkbox" id="terms" required class="custom-checkbox mt-1">
+                    <label for="terms" class="text-sm text-gray-700 cursor-pointer">
+                        I agree to the <a href="#" class="text-black hover:text-secondary font-medium transition-colors">Terms & Conditions</a> and <a href="#" class="text-black hover:text-secondary font-medium transition-colors">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <input type="checkbox" id="newsletter" class="custom-checkbox mt-1">
+                    <label for="newsletter" class="text-sm text-gray-700 cursor-pointer">
+                        Subscribe to our newsletter for exclusive furniture deals and design tips
+                    </label>
+                </div>
+
+                <button type="submit" class="w-full bg-primary hover:bg-green-400 text-white font-semibold py-3 px-4 !rounded-button transition-all duration-200 whitespace-nowrap">
+                    Create Account
+                </button>
+
+                <div class="relative my-6">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-4 bg-white text-gray-500">Or continue with</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button type="button" class="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                            <i class="ri-google-fill text-red-500"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700">Google</span>
+                    </button>
+                    <button type="button" class="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                            <i class="ri-facebook-fill text-blue-600"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700">Facebook</span>
+                    </button>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-sm text-gray-600">
+                        Already have an account?
+                        <a href="#" class="text-black hover:text-secondary font-medium transition-colors">Sign in here</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm text-gray-600 hover:text-black transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-600 hover:text-black transition-colors">Terms of Service</a>
+                    <a href="#" class="text-sm text-gray-600 hover:text-black transition-colors">Contact Support</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="w-6 h-6 flex items-center justify-center text-primary">
+                        <i class="ri-leaf-line"></i>
+                    </div>
+                    <p class="text-sm text-gray-500">© 2025 Furniture Store. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>

@@ -16,9 +16,12 @@ import { WeekendComponent } from './navigatingcomponents/home/weekend/weekend.co
 import { CategoriesBannerComponent } from './navigatingcomponents/categories/categories-banner/categories-banner.component';
 import { CategoriesCardsComponent } from './navigatingcomponents/categories/categories-cards/categories-cards.component';
 import { Navbar1Component } from './navigatingcomponents/categories/navbar1/navbar1.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Banner2Component } from './navigatingcomponents/interiordesign/banner2/banner2.component';
 import { ProductdetailesComponent } from './navigatingcomponents/interiordesign/productdetailes/productdetailes.component';
+import { RegisterComponent } from './navigatingcomponents/register/register.component';
+
+
 
 
 
@@ -41,6 +44,9 @@ import { ProductdetailesComponent } from './navigatingcomponents/interiordesign/
     Navbar1Component,
     Banner2Component,
     ProductdetailesComponent,
+    RegisterComponent,
+    
+   
    
     
     
@@ -50,7 +56,8 @@ import { ProductdetailesComponent } from './navigatingcomponents/interiordesign/
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
